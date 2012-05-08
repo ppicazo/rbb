@@ -14,62 +14,42 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.btmura.android.reddit"
-    android:versionCode="1"
-    android:versionName="1.0" >
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.btmura.android.reddit">
 
-    <uses-sdk android:minSdkVersion="14" />
+    <uses-sdk android:minSdkVersion="14"/>
 
-    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.INTERNET"/>
 
-    <application
-        android:backupAgent=".BackupAgent"
-        android:icon="@drawable/ic_launcher"
-        android:label="@string/app_name"
-        android:theme="@android:style/Theme.Holo.Light" >
-        <activity
-            android:name=".activity.BrowserActivity"
-            android:clearTaskOnLaunch="true"
-            android:label="@string/app_name" >
+    <application android:backupAgent=".BackupAgent" android:debuggable="true" android:icon="@drawable/ic_launcher" android:label="@string/app_name" android:theme="@android:style/Theme.Holo.Light">
+        <activity android:clearTaskOnLaunch="true" android:label="@string/app_name" android:name=".activity.BrowserActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
-        <activity android:name=".activity.SearchActivity" >
+        <activity android:name=".activity.SearchActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
-        <activity
-            android:name=".activity.SidebarActivity"
-            android:theme="@android:style/Theme.Holo.Light.Dialog" />
-        <activity android:name=".activity.ThingActivity" />
-        <activity android:name=".activity.ThingListActivity" />
+        <activity android:name=".activity.SidebarActivity" android:theme="@android:style/Theme.Holo.Light.Dialog"/>
+        <activity android:name=".activity.ThingActivity"/>
+        <activity android:name=".activity.ThingListActivity"/>
 
-        <activity-alias
-            android:name=".MainActivity"
-            android:label="@string/app_name"
-            android:targetActivity=".activity.BrowserActivity" >
+        <activity-alias android:label="@string/app_name" android:name=".MainActivity" android:targetActivity=".activity.BrowserActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity-alias>
 
-        <provider
-            android:name=".Provider"
-            android:authorities="com.btmura.android.reddit.provider"
-            android:exported="false" />
+        <provider android:authorities="com.btmura.android.reddit.provider" android:exported="false" android:name=".Provider"/>
 
-        <meta-data
-            android:name="com.google.android.backup.api_key"
-            android:value="AEdPqrEAAAAIf8pv0IsWSzrukJzjvXlDsBcXRwRCEFXVEjeQZw" />
+        <meta-data android:name="com.google.android.backup.api_key" android:value="AEdPqrEAAAAIf8pv0IsWSzrukJzjvXlDsBcXRwRCEFXVEjeQZw"/>
     </application>
 
 </manifest>

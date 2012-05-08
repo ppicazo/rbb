@@ -3,6 +3,8 @@
 .settings
 *.json
 apk
+target
+.DS_Store
 bin
 hprof
 gen
